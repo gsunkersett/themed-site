@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palette Studio — Themed Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><span class="logo-mark"></span>Palette Studio</a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="theme-switcher" id="theme-switcher">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <span id="theme-current"></span>
+          <span class="caret">▾</span>
+        </button>
+        <ul id="theme-list" class="theme-list" role="listbox" aria-label="Choose theme"></ul>
+      </div>
+      <div class="mode-switcher" role="group" aria-label="Color mode">
+        <button type="button" data-mode="light" aria-pressed="true">Light</button>
+        <button type="button" data-mode="dark" aria-pressed="false">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="badge">New · Four colors, endless moods</span>
+          <h1>Design that <span class="highlight">adapts</span> to every palette.</h1>
+          <p class="lead">Every element on this page is driven by just four colors. Pick a theme from the switcher and watch the whole site transform instantly.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#features">Get started</a>
+            <a class="btn btn-secondary" href="#work">See our work</a>
+            <a class="btn btn-ghost" href="#pricing">Pricing →</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="shape s1"></div>
+          <div class="shape s2"></div>
+          <div class="shape s3"></div>
+          <div class="shape s4"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Choose a palette</h2>
+      <p class="muted">Each palette has a light and dark mode. Light uses its lightest shade as the background; dark uses its darkest.</p>
+      <div id="palette-gallery" class="palette-gallery"></div>
+    </section>
+
+    <section id="features" class="container section">
+      <h2>Features</h2>
+      <div class="grid three">
+        <article class="card">
+          <div class="icon icon-primary">◆</div>
+          <h3>Instant theming</h3>
+          <p>CSS custom properties update the entire page in a single frame, with smooth transitions.</p>
+          <a href="#">Learn more →</a>
+        </article>
+        <article class="card">
+          <div class="icon icon-secondary">●</div>
+          <h3>Auto contrast</h3>
+          <p>Text colors are calculated from each color's luminance so content always stays readable.</p>
+          <a href="#">Learn more →</a>
+        </article>
+        <article class="card">
+          <div class="icon icon-accent">▲</div>
+          <h3>Remembers you</h3>
+          <p>Your chosen theme is saved locally and restored the next time you visit.</p>
+          <a href="#">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container stats">
+        <div><strong>4</strong><span>colors per theme</span></div>
+        <div><strong>∞</strong><span>combinations</span></div>
+        <div><strong>0</strong><span>build steps</span></div>
+        <div><strong>100%</strong><span>CSS variables</span></div>
+      </div>
+    </section>
+
+    <section id="work" class="container section">
+      <h2>Recent work</h2>
+      <div class="grid three">
+        <article class="card project">
+          <div class="thumb t1"></div>
+          <div class="tags"><span class="tag">Branding</span><span class="tag alt">Print</span></div>
+          <h3>Harbor Coffee Co.</h3>
+          <p>Identity system for a waterfront roastery.</p>
+        </article>
+        <article class="card project">
+          <div class="thumb t2"></div>
+          <div class="tags"><span class="tag">Web</span><span class="tag alt">UX</span></div>
+          <h3>Northwind Outfitters</h3>
+          <p>E-commerce redesign with a 32% lift in conversion.</p>
+        </article>
+        <article class="card project">
+          <div class="thumb t3"></div>
+          <div class="tags"><span class="tag">App</span><span class="tag alt">Motion</span></div>
+          <h3>Tempo Fitness</h3>
+          <p>Mobile app and motion language for training plans.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section">
+      <blockquote class="quote">
+        <p>“We swapped palettes for a seasonal campaign in minutes. The whole site just followed along.”</p>
+        <footer>— Jamie Rivera, Creative Director</footer>
+      </blockquote>
+    </section>
+
+    <section id="pricing" class="container section">
+      <h2>Pricing</h2>
+      <div class="grid three">
+        <article class="card price">
+          <h3>Starter</h3>
+          <p class="amount">$0<span>/mo</span></p>
+          <ul><li>3 themes</li><li>Community support</li><li>Basic components</li></ul>
+          <a class="btn btn-secondary" href="#">Choose</a>
+        </article>
+        <article class="card price featured">
+          <span class="badge">Most popular</span>
+          <h3>Pro</h3>
+          <p class="amount">$19<span>/mo</span></p>
+          <ul><li>Unlimited themes</li><li>Priority support</li><li>All components</li></ul>
+          <a class="btn btn-primary" href="#">Choose</a>
+        </article>
+        <article class="card price">
+          <h3>Team</h3>
+          <p class="amount">$49<span>/mo</span></p>
+          <ul><li>Shared palettes</li><li>SSO</li><li>Design tokens export</li></ul>
+          <a class="btn btn-secondary" href="#">Choose</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <div class="card contact">
+        <div>
+          <h2>Say hello</h2>
+          <p class="muted">Form controls pick up theme colors too.</p>
+          <div class="alert">ℹ️ This is a demo form — nothing is sent.</div>
+        </div>
+        <form onsubmit="event.preventDefault()">
+          <label>Name<input type="text" placeholder="Ada Lovelace" /></label>
+          <label>Email<input type="email" placeholder="ada@example.com" /></label>
+          <label>Topic
+            <select><option>General</option><option>Project</option><option>Support</option></select>
+          </label>
+          <label class="check"><input type="checkbox" checked /> Subscribe to updates</label>
+          <label>Message<textarea rows="3" placeholder="Tell us about your project…"></textarea></label>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Palette Studio</span>
+      <span class="muted">Themes defined in <code>themes.js</code></span>
+    </div>
+  </footer>
+
+  <script src="themes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
